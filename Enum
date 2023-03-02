@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practicing // 
+{
+    public enum Genero { Acao, Aventura, Terror, Animacao, Comedia, Suspense} 
+
+    public class Filme
+    {
+        public string Titulo;
+        public Genero GenerodoTitulo; 
+    }
+    internal class Enumeracoes
+    {
+        public static void Executar()
+        {
+            int id = (int)Genero.Animacao;
+            Console.WriteLine(id);
+
+            var FilmeParaFamilia = new Filme();
+
+            FilmeParaFamilia.Titulo = "Alfred Hitchcock";
+            FilmeParaFamilia.GenerodoTitulo = Genero.Suspense;
+
+            Console.WriteLine("O Filme de " + FilmeParaFamilia.Titulo + " eh do genero " + FilmeParaFamilia.GenerodoTitulo);
+        }
+    }
+}
